@@ -1,0 +1,39 @@
+{
+  "name": "radyframes",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "portfolio:import": "node scripts/import-portfolio.mjs",
+    "test:portfolio-import": "node --test scripts/portfolio-import.test.mjs",
+    "test:thumbnail-manager": "node --conditions=react-server --import tsx --test scripts/thumbnail-manager.test.ts",
+    "test:phase4": "node --conditions=react-server --import tsx --test scripts/phase4.test.ts"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.45.0",
+    "next": "^16.4.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "server-only": "^0.0.1",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.6",
+    "exceljs": "^4.4.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "^11.1.1"
+    }
+  }
+}
